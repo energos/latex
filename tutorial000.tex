@@ -1,0 +1,188 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{verbatim}
+\usepackage[colorlinks]{hyperref}
+\usepackage{graphicx, float}
+\graphicspath{{assets/images/}}
+%% Margins
+\usepackage[top=0.75in, bottom=1.00in, left=1.20in, right=1.00in]{geometry}
+%% Temporary fix until better understanding of the indentation rules
+\setlength{\parindent}{0pt}
+
+\title{Yet Another \LaTeX{} Tutorial\\
+       \medskip \large A road to Procrastination}
+\author{Energos}
+\date{March 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Why?}
+\href{https://www.youtube.com/watch?v=9eLjt5Lrocw}
+     {Why \LaTeX{}? - YouTube}
+
+\section{Install \LaTeX{} in Debian}
+\begin{verbatim}
+apt install texlive texlive-science texlive-lang-english texlive-xetex
+\end{verbatim}
+
+\section{The Document}
+\begin{verbatim}
+\begin{document}
+\maketitle
+\section{Section title}
+\subsection{Subsection title}
+\end{document}
+\end{verbatim}
+
+\section{Title}
+\begin{verbatim}
+\title{Yet Another \LaTeX{} Tutorial\\
+       \medskip \large A road to Procrastination}
+\author{Energos}
+\date{March 2025}
+\end{verbatim}
+
+\section{A Section}
+\begin{verbatim}
+\section{A Section}
+\end{verbatim}
+
+\subsection{A Subsection}
+\begin{verbatim}
+\section{A Subsection}
+\end{verbatim}
+
+\section{Lorem ipsum}
+
+Lorem ipsum dolor sit amet. Qui officiis repellendus id sunt consequatur
+ut nisi eligendi est rerum dolorem qui rerum porro non laudantium quasi ut
+laudantium aspernatur.
+
+Sed nesciunt voluptatem eos internos delectus sed blanditiis explicabo nam
+officia voluptatem vel provident minus non distinctio nihil.
+
+\section{Paragraph indentation}
+Temporary fix until better understanding of the indentation rules.
+\begin{verbatim}
+\setlength{\parindent}{0pt}
+\end{verbatim}
+
+\section{Margins}
+\begin{verbatim}
+\usepackage[top=0.75in, bottom=1.00in, left=1.20in, right=1.00in]{geometry}
+\end{verbatim}
+
+\section{Lists}
+\begin{itemize}
+\item One
+\item Two
+\item Three
+\end{itemize}
+
+\begin{verbatim}
+\begin{itemize}
+\item One
+\item Two
+\item Three
+\end{itemize}
+\end{verbatim}
+
+\section{URL links}
+\href{https://www.ctan.org/pkg/hyperref}{CTAN: Package hyperref}
+
+\begin{verbatim}
+\usepackage[colorlinks]{hyperref}
+\href{https://www.ctan.org/pkg/hyperref}{CTAN: Package hyperref}
+\end{verbatim}
+
+\section{Verbatim}
+\begin{verbatim}
+\usepackage{verbatim}
+\end{verbatim}
+
+\subsection{Including verbatim text}
+
+\verb|\begin{verbatim}| \\
+\verb|Verbatim stuff.| \\
+\verb|More verbatim stuff...| \\
+\verb|\end{verbatim}|
+
+\subsection{Including a file verbatim}
+\begin{verbatim}
+\verbatiminput{tutorial000.tex}
+\end{verbatim}
+
+\section{Images}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=4in]{latex-project.png}
+  \caption{\LaTeX{}}
+  \label{fig:latex-project-logo}
+\end{figure}
+
+\begin{verbatim}
+\usepackage{graphicx, float}
+\graphicspath{{assets/images/}}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=4in]{latex-project.png}
+  \caption{\LaTeX{}}
+  \label{fig:latex-project-logo}
+\end{figure}
+\end{verbatim}
+
+SVG Images require more work:
+\href{https://www.baeldung.com/cs/latex-svg-images}
+     {How to Use SVG Images in \LaTeX{}}.
+
+\section{Packages}
+\begin{itemize}
+\item \href{https://www.ctan.org/pkg/hyperref}{CTAN: Package hyperref}
+\item \href{https://ctan.org/pkg/verbatim}{CTAN: Package verbatim}
+\item \href{https://ctan.org/pkg/geometry}{CTAN: Package geometry}
+\item \href{https://www.ctan.org/pkg/graphicx}{CTAN: Package graphicx}
+\item \href{https://www.ctan.org/pkg/float}{CTAN: Package float}
+\end{itemize}
+
+\section{Generate a .PDF file}
+\begin{verbatim}
+xelatex tutorial000.tex
+\end{verbatim}
+or
+\begin{verbatim}
+pdflatex tutorial000.tex
+\end{verbatim}
+
+\section{Resources}
+\href{https://www.latex-project.org/}{LaTeX - A document preparation system}
+
+\href{https://www.ctan.org/}{CTAN: Comprehensive TeX Archive Network}
+
+\href{https://www.ams.org/arc/resources/amslatex-about.html}
+     {American Mathematical Society - LaTeX extensions}
+
+\href{https://www.ams.org/arc/resources/texresources.html}
+     {American Mathematical Society - TeX Resources}
+
+\href{https://texfaq.org/}
+     {The TeX Frequently Asked Question List - The TeX FAQ}
+
+\href{https://texfaq.org/FAQ-latex-books}{Books on LaTeX - The TeX FAQ}
+
+\href{https://www.gnu.org/software/auctex/}
+     {AUCTeX - Sophisticated document creation in GNU Emacs}
+
+\section{Tutorials}
+\href{https://www.youtube.com/watch?v=lgiCpA4zzGU}
+     {LaTeX for Students – A Simple Quickstart Guide - YouTube} \\
+\href{https://www.youtube.com/watch?v=VqMETR1GeYI}
+     {LaTeX Basics 00: Installation and Hello, World! - YouTube} \\
+\href{https://www.youtube.com/watch?v=_q4aJdbKXKI}
+     {LaTeX Basics 0½: Emacs - YouTube}
+
+\section{The whole enchilada}
+\verbatiminput{tutorial000.tex}
+
+\end{document}
