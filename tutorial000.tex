@@ -3,6 +3,8 @@
 \usepackage[colorlinks]{hyperref}
 \usepackage{graphicx, float}
 \graphicspath{{assets/images/}}
+%% \usepackage{amsmath, amssymb, amsthm, amsfonts}
+\usepackage{amsmath}
 %% Margins
 \usepackage[top=0.75in, bottom=1.00in, left=1.20in, right=1.00in]{geometry}
 %% Temporary fix until better understanding of the indentation rules
@@ -137,6 +139,39 @@ SVG Images require more work:
 \href{https://www.baeldung.com/cs/latex-svg-images}
      {How to Use SVG Images in \LaTeX{}}.
 
+\section{Equations}
+
+\begin{align}
+\nabla \cdot \mathbf{E} \,\,\, &= \frac{\rho}{\varepsilon_0} \\
+\nabla \cdot \mathbf{B} \,\,\, &= 0 \\
+\nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
+\nabla \times \mathbf{B} &= \mu_0 \left(\mathbf{J}
+  + \varepsilon_0  \frac{\partial \mathbf{E}}{\partial t} \right)
+\end{align}
+
+\begin{align}
+\sin x &= \sum^{\infty}_{n=0} \frac{(-1)^n}{(2n+1)!} x^{2n+1}
+  &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \frac{x^9}{9!}
+  - \cdots && \text{for all } x\\[6pt]
+\cos x &= \sum^{\infty}_{n=0} \frac{(-1)^n}{(2n)!} x^{2n}
+  &= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \frac{x^8}{8!}
+  - \cdots && \text{for all } x
+\end{align}
+
+\begin{align}
+A &= 4 \pi r^2 \\
+V &= \frac{4}{3} \pi r^3
+\end{align}
+
+\begin{verbatim}
+\usepackage{amsmath}
+
+\begin{align}
+A &= 4 \pi r^2 \\
+V &= \frac{4}{3} \pi r^3
+\end{align}
+\end{verbatim}
+
 \section{Packages}
 \begin{itemize}
 \item \href{https://www.ctan.org/pkg/hyperref}{CTAN: Package hyperref}
@@ -144,6 +179,7 @@ SVG Images require more work:
 \item \href{https://ctan.org/pkg/geometry}{CTAN: Package geometry}
 \item \href{https://www.ctan.org/pkg/graphicx}{CTAN: Package graphicx}
 \item \href{https://www.ctan.org/pkg/float}{CTAN: Package float}
+\item \href{https://ctan.org/pkg/amsmath?lang=en}{CTAN: Package amsmath}
 \end{itemize}
 
 \section{Generate a .PDF file}
