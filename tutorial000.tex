@@ -3,15 +3,15 @@
 \usepackage[colorlinks]{hyperref}
 \usepackage{graphicx, float}
 \graphicspath{{assets/images/}}
-%% \usepackage{amsmath, amssymb, amsthm, amsfonts}
+% \usepackage{amsmath, amssymb, amsthm, amsfonts}
 \usepackage{amsmath}
-%% Margins
+% Margins
 \usepackage[top=0.75in, bottom=1.00in, left=1.20in, right=1.00in]{geometry}
-%% Temporary fix until better understanding of the indentation rules
+% Temporary fix until better understanding of the indentation rules
 \setlength{\parindent}{0pt}
 
-\title{Yet Another \LaTeX{} Tutorial\\
-       \medskip \large A road to Procrastination}
+\title{Yet Another \LaTeX{} Tutorial \\
+  \medskip \large A road to Procrastination}
 \author{Energos}
 \date{March 2025}
 
@@ -21,7 +21,7 @@
 
 \section{Why?}
 \href{https://www.youtube.com/watch?v=9eLjt5Lrocw}
-     {Why \LaTeX{}? - YouTube}
+{Why \LaTeX{}? - YouTube}
 
 \section{Install \LaTeX{} in Debian}
 \begin{verbatim}
@@ -39,7 +39,7 @@ apt install texlive texlive-science texlive-lang-english texlive-xetex
 
 \section{Title}
 \begin{verbatim}
-\title{Yet Another \LaTeX{} Tutorial\\
+\title{Yet Another \LaTeX{} Tutorial \\
        \medskip \large A road to Procrastination}
 \author{Energos}
 \date{March 2025}
@@ -137,69 +137,68 @@ Temporary fix until better understanding of the indentation rules.
 
 SVG Images require more work:
 \href{https://www.baeldung.com/cs/latex-svg-images}
-     {How to Use SVG Images in \LaTeX{}}.
+{How to Use SVG Images in \LaTeX{}}.
 
 \section{Equations}
 
 \begin{align}
-\nabla \cdot \mathbf{E} \,\,\, &= \frac{\rho}{\varepsilon_0} \\
-\nabla \cdot \mathbf{B} \,\,\, &= 0 \\
-\nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
-\nabla \times \mathbf{B} &= \mu_0 \left(\mathbf{J}
-  + \varepsilon_0  \frac{\partial \mathbf{E}}{\partial t} \right)
+  \nabla \cdot \mathbf{E} \,\,\, &= \frac{\rho}{\varepsilon_0} \\
+  \nabla \cdot \mathbf{B} \,\,\, &= 0 \\
+  \nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
+  \nabla \times \mathbf{B} &= \mu_0 \left(\mathbf{J}
+                             + \varepsilon_0 \frac{\partial
+                             \mathbf{E}}{\partial t} \right)
 \end{align}
 
 \begin{align}
-\sin x &= \sum^{\infty}_{n=0} \frac{(-1)^n}{(2n+1)!} x^{2n+1}
+  \sin x &= \sum^{\infty}_{n=0} \frac{(-1)^n}{(2n+1)!} x^{2n+1}
   &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \frac{x^9}{9!}
-  - \cdots && \text{for all } x\\[6pt]
-\cos x &= \sum^{\infty}_{n=0} \frac{(-1)^n}{(2n)!} x^{2n}
+    - \cdots && \text{for all } x\\[6pt]
+  \cos x &= \sum^{\infty}_{n=0} \frac{(-1)^n}{(2n)!} x^{2n}
   &= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \frac{x^8}{8!}
-  - \cdots && \text{for all } x
+    - \cdots && \text{for all } x
 \end{align}
 
 \begin{align}
-A &= 4 \pi r^2 \\
-V &= \frac{4}{3} \pi r^3
+  A &= 4 \pi r^2 \\
+  V &= \frac{4}{3} \pi r^3
 \end{align}
 
 \begin{verbatim}
 \usepackage{amsmath}
 
 \begin{align}
-A &= 4 \pi r^2 \\
-V &= \frac{4}{3} \pi r^3
+  A &= 4 \pi r^2 \\
+  V &= \frac{4}{3} \pi r^3
 \end{align}
 \end{verbatim}
 
 \section{Simple Tab Stops}
 \begin{tabbing}
-~~~~~~~~~~~~~~ \= ~~~~~~~~~~~~~~ \= 0 \\
-1 \> 1 \> 1 \\
-22 \> 22 \> 22 \\
-333 \> 333 \> 333 \\
-4444 \> 4444 \> 4444
+  ~~~~~~~~~~~~~~ \= ~~~~~~~~~~~~~~ \= 0 \\
+  1 \> 1 \> 1 \\
+  22 \> 22 \> 22 \\
+  333 \> 333 \> 333 \\
+  4444 \> 4444 \> 4444
 \end{tabbing}
 
 \begin{verbatim}
 \begin{tabbing}
-~~~~~~~~~~~~~~ \= ~~~~~~~~~~~~~~ \= 0 \\
-1 \> 1 \> 1 \\
-22 \> 22 \> 22 \\
-333 \> 333 \> 333 \\
-4444 \> 4444 \> 4444
+  ~~~~~~~~~~~~~~ \= ~~~~~~~~~~~~~~ \= 0 \\
+  1 \> 1 \> 1 \\
+  22 \> 22 \> 22 \\
+  333 \> 333 \> 333 \\
+  4444 \> 4444 \> 4444
 \end{tabbing}
 \end{verbatim}
 
 \section{Packages}
-\begin{itemize}
-\item \href{https://www.ctan.org/pkg/hyperref}{CTAN: Package hyperref}
-\item \href{https://ctan.org/pkg/verbatim}{CTAN: Package verbatim}
-\item \href{https://ctan.org/pkg/geometry}{CTAN: Package geometry}
-\item \href{https://www.ctan.org/pkg/graphicx}{CTAN: Package graphicx}
-\item \href{https://www.ctan.org/pkg/float}{CTAN: Package float}
-\item \href{https://ctan.org/pkg/amsmath?lang=en}{CTAN: Package amsmath}
-\end{itemize}
+- \href{https://www.ctan.org/pkg/hyperref}{CTAN: Package hyperref} \\
+- \href{https://ctan.org/pkg/verbatim}{CTAN: Package verbatim} \\
+- \href{https://ctan.org/pkg/geometry}{CTAN: Package geometry} \\
+- \href{https://www.ctan.org/pkg/graphicx}{CTAN: Package graphicx} \\
+- \href{https://www.ctan.org/pkg/float}{CTAN: Package float} \\
+- \href{https://ctan.org/pkg/amsmath?lang=en}{CTAN: Package amsmath}
 
 \section{Generate a .PDF file}
 \begin{verbatim}
@@ -211,31 +210,26 @@ pdflatex tutorial000.tex
 \end{verbatim}
 
 \section{Resources}
-\href{https://www.latex-project.org/}{LaTeX - A document preparation system}
-
-\href{https://www.ctan.org/}{CTAN: Comprehensive TeX Archive Network}
-
-\href{https://www.ams.org/arc/resources/amslatex-about.html}
-     {American Mathematical Society - LaTeX extensions}
-
-\href{https://www.ams.org/arc/resources/texresources.html}
-     {American Mathematical Society - TeX Resources}
-
-\href{https://texfaq.org/}
-     {The TeX Frequently Asked Question List - The TeX FAQ}
-
-\href{https://texfaq.org/FAQ-latex-books}{Books on LaTeX - The TeX FAQ}
-
-\href{https://www.gnu.org/software/auctex/}
-     {AUCTeX - Sophisticated document creation in GNU Emacs}
+- \href{https://www.latex-project.org/}
+{LaTeX - A document preparation system} \\
+- \href{https://www.ctan.org/}{CTAN: Comprehensive TeX Archive Network} \\
+- \href{https://www.ams.org/arc/resources/amslatex-about.html}
+{American Mathematical Society - LaTeX extensions} \\
+- \href{https://www.ams.org/arc/resources/texresources.html}
+{American Mathematical Society - TeX Resources} \\
+- \href{https://texfaq.org/}
+{The TeX Frequently Asked Question List - The TeX FAQ} \\
+- \href{https://texfaq.org/FAQ-latex-books}{Books on LaTeX - The TeX FAQ} \\
+- \href{https://www.gnu.org/software/auctex/}
+{AUCTeX - Sophisticated document creation in GNU Emacs}
 
 \section{Tutorials}
-\href{https://www.youtube.com/watch?v=lgiCpA4zzGU}
-     {LaTeX for Students – A Simple Quickstart Guide - YouTube} \\
-\href{https://www.youtube.com/watch?v=VqMETR1GeYI}
-     {LaTeX Basics 00: Installation and Hello, World! - YouTube} \\
-\href{https://www.youtube.com/watch?v=_q4aJdbKXKI}
-     {LaTeX Basics 0½: Emacs - YouTube}
+- \href{https://www.youtube.com/watch?v=lgiCpA4zzGU}
+{LaTeX for Students – A Simple Quickstart Guide - YouTube} \\
+- \href{https://www.youtube.com/watch?v=VqMETR1GeYI}
+{LaTeX Basics 00: Installation and Hello, World! - YouTube} \\
+- \href{https://www.youtube.com/watch?v=_q4aJdbKXKI}
+{LaTeX Basics 0½: Emacs - YouTube}
 
 \section{The whole enchilada}
 \verbatiminput{tutorial000.tex}
