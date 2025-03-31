@@ -5,6 +5,8 @@
 \graphicspath{{assets/images/}}
 % \usepackage{amsmath, amssymb, amsthm, amsfonts}
 \usepackage{amsmath}
+\usepackage{tcolorbox}
+\tcbset{colback=blue!4!white,colframe=blue!50!green!30!gray}
 % Margins
 \usepackage[top=1.5cm, bottom=2cm, left=2.4cm, right=1.8cm]{geometry}
 % Temporary fix until better understanding of the indentation rules
@@ -192,13 +194,48 @@ SVG Images require more work:
 \end{tabbing}
 \end{verbatim}
 
+\section{Boxes}
+Draw colored and framed boxes using
+\href{https://ctan.org/pkg/tcolorbox?lang=en}{tcolorbox}.
+This package has a huge set of options and features.
+Please read the
+\href{http://mirrors.ctan.org/macros/latex/contrib/tcolorbox/tcolorbox.pdf}
+{documentation} and
+\href{http://mirrors.ctan.org/macros/latex/contrib/tcolorbox/tcolorbox-example.pdf}
+{examples of use}.
+
+\begin{tcolorbox}
+  This is a box using document wide default colors.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=red!30!white,colframe=red!80!black]
+  This is a somewhat reddish box.
+\end{tcolorbox}
+
+\begin{tcolorbox}
+\begin{verbatim}
+\usepackage{tcolorbox}
+% Define document wide default colors
+\tcbset{colback=blue!4!white,colframe=blue!50!green!30!gray}
+
+\begin{tcolorbox}
+  This is a box using document wide default colors.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=red!30!white,colframe=red!80!black]
+  This is a somewhat reddish box.
+\end{tcolorbox}
+\end{verbatim}
+\end{tcolorbox}
+
 \section{Packages}
 - \href{https://www.ctan.org/pkg/hyperref}{CTAN: Package hyperref} \\
 - \href{https://ctan.org/pkg/verbatim}{CTAN: Package verbatim} \\
 - \href{https://ctan.org/pkg/geometry}{CTAN: Package geometry} \\
 - \href{https://www.ctan.org/pkg/graphicx}{CTAN: Package graphicx} \\
 - \href{https://www.ctan.org/pkg/float}{CTAN: Package float} \\
-- \href{https://ctan.org/pkg/amsmath?lang=en}{CTAN: Package amsmath}
+- \href{https://ctan.org/pkg/amsmath?lang=en}{CTAN: Package amsmath} \\
+- \href{https://ctan.org/pkg/tcolorbox?lang=en}{CTAN: Package tcolorbox}
 
 \section{Generate a .PDF file}
 \begin{verbatim}
