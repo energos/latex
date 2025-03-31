@@ -5,7 +5,7 @@
 \graphicspath{{assets/images/}}
 % \usepackage{amsmath, amssymb, amsthm, amsfonts}
 \usepackage{amsmath}
-\usepackage{tcolorbox}
+\usepackage[listings]{tcolorbox}
 \tcbset{colback=blue!4!white,colframe=blue!50!green!30!gray}
 % Margins
 \usepackage[top=1.5cm, bottom=2cm, left=2.4cm, right=1.8cm]{geometry}
@@ -205,6 +205,16 @@ Please read the
 {examples of use}.
 
 \begin{tcolorbox}
+\begin{verbatim}
+\usepackage{tcolorbox}
+% Define document wide default colors
+\tcbset{colback=blue!4!white,colframe=blue!50!green!30!gray}
+\end{verbatim}
+\end{tcolorbox}
+
+\subsection{Simple Boxes}
+
+\begin{tcolorbox}
   This is a box using document wide default colors.
 \end{tcolorbox}
 
@@ -214,10 +224,6 @@ Please read the
 
 \begin{tcolorbox}
 \begin{verbatim}
-\usepackage{tcolorbox}
-% Define document wide default colors
-\tcbset{colback=blue!4!white,colframe=blue!50!green!30!gray}
-
 \begin{tcolorbox}
   This is a box using document wide default colors.
 \end{tcolorbox}
@@ -225,6 +231,52 @@ Please read the
 \begin{tcolorbox}[colback=red!30!white,colframe=red!80!black]
   This is a somewhat reddish box.
 \end{tcolorbox}
+\end{verbatim}
+\end{tcolorbox}
+
+\subsection{Listing Boxes}
+
+\begin{tcblisting}{colback=red!5!white,colframe=red!75!black}
+  Boxes inside a box:
+  \begin{tcolorbox}
+    This is a box using document wide default colors.
+  \end{tcolorbox}
+  \begin{tcolorbox}[colback=red!30!white,colframe=red!80!black]
+    This is a somewhat reddish box.
+  \end{tcolorbox}
+\end{tcblisting}
+
+\begin{tcolorbox}
+\begin{verbatim}
+\usepackage[listings]{tcolorbox}
+
+\begin{tcblisting}{colback=red!5!white,colframe=red!75!black}
+  Boxes inside a box:
+  \begin{tcolorbox}
+    This is a box using document wide default colors.
+  \end{tcolorbox}
+  \begin{tcolorbox}[colback=red!30!white,colframe=red!80!black]
+    This is a somewhat reddish box.
+  \end{tcolorbox}
+\end{tcblisting}
+\end{verbatim}
+\end{tcolorbox}
+
+\begin{tcblisting}{colback=red!5!white,colframe=red!75!black}
+  This is a \LaTeX\ example:
+  \begin{equation*}
+    \sum\limits_{i=1}^n i = \frac{n(n+1)}{2}.
+  \end{equation*}
+\end{tcblisting}
+
+\begin{tcolorbox}
+\begin{verbatim}
+\begin{tcblisting}{colback=red!5!white,colframe=red!75!black}
+  This is a \LaTeX\ example:
+  \begin{equation*}
+    \sum\limits_{i=1}^n i = \frac{n(n+1)}{2}.
+  \end{equation*}
+\end{tcblisting}
 \end{verbatim}
 \end{tcolorbox}
 
