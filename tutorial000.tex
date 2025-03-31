@@ -26,11 +26,14 @@
 {Why \LaTeX{}? - YouTube}
 
 \section{Install \LaTeX{} in Debian}
+\begin{tcolorbox}
 \begin{verbatim}
 apt install texlive texlive-science texlive-lang-english texlive-xetex
 \end{verbatim}
+\end{tcolorbox}
 
 \section{The Document}
+\begin{tcolorbox}
 \begin{verbatim}
 \begin{document}
 \maketitle
@@ -38,24 +41,31 @@ apt install texlive texlive-science texlive-lang-english texlive-xetex
 \subsection{Subsection title}
 \end{document}
 \end{verbatim}
+\end{tcolorbox}
 
 \section{Title}
+\begin{tcolorbox}
 \begin{verbatim}
 \title{Yet Another \LaTeX{} Tutorial \\
        \medskip \large A road to Procrastination}
 \author{Energos}
 \date{March 2025}
 \end{verbatim}
+\end{tcolorbox}
 
 \section{A Section}
+\begin{tcolorbox}
 \begin{verbatim}
 \section{A Section}
 \end{verbatim}
+\end{tcolorbox}
 
 \subsection{A Subsection}
+\begin{tcolorbox}
 \begin{verbatim}
 \section{A Subsection}
 \end{verbatim}
+\end{tcolorbox}
 
 \section{Lorem ipsum}
 
@@ -68,131 +78,137 @@ officia voluptatem vel provident minus non distinctio nihil.
 
 \section{Paragraph indentation}
 Temporary fix until better understanding of the indentation rules.
+\begin{tcolorbox}
 \begin{verbatim}
 \setlength{\parindent}{0pt}
 \end{verbatim}
+\end{tcolorbox}
 
 \section{Margins}
+\begin{tcolorbox}
 \begin{verbatim}
 \usepackage[top=0.75in, bottom=1.00in, left=1.20in, right=1.00in]{geometry}
 \end{verbatim}
+\end{tcolorbox}
 
 \section{Lists}
-\begin{itemize}
-\item One
-\item Two
-\item Three
-\end{itemize}
-
-\begin{verbatim}
-\begin{itemize}
-\item One
-\item Two
-\item Three
-\end{itemize}
-\end{verbatim}
+\begin{tcblisting}{}
+  \begin{itemize}
+  \item One
+  \item Two
+  \item Three
+  \end{itemize}
+\end{tcblisting}
 
 \section{URL links}
-\href{https://www.ctan.org/pkg/hyperref}{CTAN: Package hyperref}
-
+\begin{tcolorbox}
 \begin{verbatim}
 \usepackage[colorlinks]{hyperref}
-\href{https://www.ctan.org/pkg/hyperref}{CTAN: Package hyperref}
 \end{verbatim}
+\end{tcolorbox}
+
+\begin{tcblisting}{}
+  \href{https://www.ctan.org/pkg/hyperref}{CTAN: Package hyperref}
+\end{tcblisting}
 
 \section{Verbatim}
+\begin{tcolorbox}
 \begin{verbatim}
 \usepackage{verbatim}
 \end{verbatim}
+\end{tcolorbox}
 
 \subsection{Including verbatim text}
-
-\verb|\begin{verbatim}| \\
+\begin{tcolorbox}
+  \verb|\begin{verbatim}| \\
 \verb|Verbatim stuff.| \\
 \verb|More verbatim stuff...| \\
 \verb|\end{verbatim}|
+\end{tcolorbox}
 
 \subsection{Including a file verbatim}
+\begin{tcolorbox}
 \begin{verbatim}
-\verbatiminput{tutorial000.tex}
+\verbatiminput{file_name}
 \end{verbatim}
+\end{tcolorbox}
 
 \section{Images}
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=4in]{latex-project.png}
-  \caption{\LaTeX{}}
-  \label{fig:latex-project-logo}
-\end{figure}
-
+\begin{tcolorbox}
 \begin{verbatim}
 \usepackage{graphicx, float}
 \graphicspath{{assets/images/}}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=4in]{latex-project.png}
-  \caption{\LaTeX{}}
-  \label{fig:latex-project-logo}
-\end{figure}
 \end{verbatim}
+\end{tcolorbox}
 
+\begin{tcblisting}{}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=4in]{latex-project.png}
+    \caption{\LaTeX{}}
+    \label{fig:latex-project-logo}
+  \end{figure}
+\end{tcblisting}
+
+\begin{tcblisting}{}
+  \begin{figure}[H]
+    \centering
+    \href{https://devuan.org}
+    {\includegraphics[width=4in]{devuan-logo_tm_600dpi.png}}
+    \caption{Image acts as a hyperlink to a URL}
+    \label{fig:devuan-logo}
+  \end{figure}
+\end{tcblisting}
+
+\bigskip
 SVG Images require more work:
 \href{https://www.baeldung.com/cs/latex-svg-images}
 {How to Use SVG Images in \LaTeX{}}.
 
 \section{Equations}
 
-\begin{align}
-  \nabla \cdot \mathbf{E} \,\,\, &= \frac{\rho}{\varepsilon_0} \\
-  \nabla \cdot \mathbf{B} \,\,\, &= 0 \\
-  \nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
-  \nabla \times \mathbf{B} &= \mu_0 \left(\mathbf{J}
-                             + \varepsilon_0 \frac{\partial
-                             \mathbf{E}}{\partial t} \right)
-\end{align}
-
-\begin{align}
-  \sin x &= \sum^{\infty}_{n=0} \frac{(-1)^n}{(2n+1)!} x^{2n+1}
-  &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \frac{x^9}{9!}
-    - \cdots && \text{for all } x\\[6pt]
-  \cos x &= \sum^{\infty}_{n=0} \frac{(-1)^n}{(2n)!} x^{2n}
-  &= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \frac{x^8}{8!}
-    - \cdots && \text{for all } x
-\end{align}
-
-\begin{align}
-  A &= 4 \pi r^2 \\
-  V &= \frac{4}{3} \pi r^3
-\end{align}
-
+\begin{tcolorbox}
 \begin{verbatim}
+% \usepackage{amsmath, amssymb, amsthm, amsfonts}
 \usepackage{amsmath}
-
-\begin{align}
-  A &= 4 \pi r^2 \\
-  V &= \frac{4}{3} \pi r^3
-\end{align}
 \end{verbatim}
+\end{tcolorbox}
+
+
+\begin{tcblisting}{}
+  \begin{tcolorbox}[title=Maxwell Equations]
+    \begin{align}
+      \nabla \cdot \mathbf{E} \,\,\, &= \frac{\rho}{\varepsilon_0} \\
+      \nabla \cdot \mathbf{B} \,\,\, &= 0 \\
+      \nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
+      \nabla \times \mathbf{B} &= \mu_0 \left(\mathbf{J}
+                                 + \varepsilon_0 \frac{\partial
+                                 \mathbf{E}}{\partial t} \right)
+    \end{align}
+  \end{tcolorbox}
+\end{tcblisting}
+
+\begin{tcblisting}{}
+  \begin{align}
+    \sin x &= \sum^{\infty}_{n=0} \frac{(-1)^n}{(2n+1)!} x^{2n+1}
+    &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \frac{x^9}{9!}
+      - \cdots && \text{for all } x\\[6pt]
+    \cos x &= \sum^{\infty}_{n=0} \frac{(-1)^n}{(2n)!} x^{2n}
+    &= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \frac{x^8}{8!}
+      - \cdots && \text{for all } x
+  \end{align}
+\end{tcblisting}
 
 \section{Simple Tab Stops}
-\begin{tabbing}
-  ~~~~~~~~~~~~~~ \= ~~~~~~~~~~~~~~ \= 0 \\
-  1 \> 1 \> 1 \\
-  22 \> 22 \> 22 \\
-  333 \> 333 \> 333 \\
-  4444 \> 4444 \> 4444
-\end{tabbing}
-
-\begin{verbatim}
-\begin{tabbing}
-  ~~~~~~~~~~~~~~ \= ~~~~~~~~~~~~~~ \= 0 \\
-  1 \> 1 \> 1 \\
-  22 \> 22 \> 22 \\
-  333 \> 333 \> 333 \\
-  4444 \> 4444 \> 4444
-\end{tabbing}
-\end{verbatim}
+\begin{tcblisting}{}
+  \begin{tabbing}
+    ~~~~~~~~~~~~~~ \= ~~~~~~~~~~~~~~ \= 0 \\
+    1 \> 1 \> 1 \\
+    22 \> 22 \> 22 \\
+    333 \> 333 \> 333 \\
+    4444 \> 4444 \> 4444
+  \end{tabbing}
+\end{tcblisting}
 
 \section{Boxes}
 Draw colored and framed boxes using
@@ -215,36 +231,31 @@ Please read the
 \subsection{Simple Boxes}
 
 \begin{tcolorbox}
-  This is a box using document wide default colors.
-\end{tcolorbox}
-
-\begin{tcolorbox}[colback=red!30!white,colframe=red!80!black]
-  This is a somewhat reddish box.
-\end{tcolorbox}
-
-\begin{tcolorbox}
 \begin{verbatim}
 \begin{tcolorbox}
   This is a box using document wide default colors.
 \end{tcolorbox}
+\end{verbatim}
+\end{tcolorbox}
+\begin{tcolorbox}
+  This is a box using document wide default colors.
+\end{tcolorbox}
 
+\bigskip
+
+\begin{tcolorbox}
+\begin{verbatim}
 \begin{tcolorbox}[colback=red!30!white,colframe=red!80!black]
   This is a somewhat reddish box.
 \end{tcolorbox}
 \end{verbatim}
 \end{tcolorbox}
 
-\subsection{Listing Boxes}
+\begin{tcolorbox}[colback=red!30!white,colframe=red!80!black]
+  This is a somewhat reddish box.
+\end{tcolorbox}
 
-\begin{tcblisting}{colback=red!5!white,colframe=red!75!black}
-  Boxes inside a box:
-  \begin{tcolorbox}
-    This is a box using document wide default colors.
-  \end{tcolorbox}
-  \begin{tcolorbox}[colback=red!30!white,colframe=red!80!black]
-    This is a somewhat reddish box.
-  \end{tcolorbox}
-\end{tcblisting}
+\subsection{Listing Boxes}
 
 \begin{tcolorbox}
 \begin{verbatim}
@@ -263,11 +274,16 @@ Please read the
 \end{tcolorbox}
 
 \begin{tcblisting}{colback=red!5!white,colframe=red!75!black}
-  This is a \LaTeX\ example:
-  \begin{equation*}
-    \sum\limits_{i=1}^n i = \frac{n(n+1)}{2}.
-  \end{equation*}
+  Boxes inside a box:
+  \begin{tcolorbox}
+    This is a box using default colors.
+  \end{tcolorbox}
+  \begin{tcolorbox}[colback=red!30!white,colframe=red!80!black]
+    This is a somewhat reddish box.
+  \end{tcolorbox}
 \end{tcblisting}
+
+\bigskip
 
 \begin{tcolorbox}
 \begin{verbatim}
@@ -280,6 +296,13 @@ Please read the
 \end{verbatim}
 \end{tcolorbox}
 
+\begin{tcblisting}{colback=red!5!white,colframe=red!75!black}
+  This is a \LaTeX\ example:
+  \begin{equation*}
+    \sum\limits_{i=1}^n i = \frac{n(n+1)}{2}.
+  \end{equation*}
+\end{tcblisting}
+
 \section{Packages}
 - \href{https://www.ctan.org/pkg/hyperref}{CTAN: Package hyperref} \\
 - \href{https://ctan.org/pkg/verbatim}{CTAN: Package verbatim} \\
@@ -289,14 +312,26 @@ Please read the
 - \href{https://ctan.org/pkg/amsmath?lang=en}{CTAN: Package amsmath} \\
 - \href{https://ctan.org/pkg/tcolorbox?lang=en}{CTAN: Package tcolorbox}
 
-\section{Generate a .PDF file}
+\section{Generate a PDF file}
+
+\subsection{\TeX{} Engines}
+\href{https://www.overleaf.com/learn/latex/Articles/What\%27s_in_a_Name\%3A_A_Guide_to_the_Many_Flavours_of_TeX}
+{What's in a Name: A Guide to the Many Flavours of TeX - Overleaf, Online LaTeX Editor}
+
+\subsection{Using the XeTeX engine}
+This is the preferred engine so far...
+\begin{tcolorbox}
 \begin{verbatim}
-xelatex tutorial000.tex
+xelatex thisfile.tex
 \end{verbatim}
-or
+\end{tcolorbox}
+
+\subsection{Using the pdfTeX engine}
+\begin{tcolorbox}
 \begin{verbatim}
-pdflatex tutorial000.tex
+pdflatex thisfile.tex
 \end{verbatim}
+\end{tcolorbox}
 
 \section{Resources}
 - \href{https://www.latex-project.org/}
