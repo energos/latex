@@ -68,13 +68,30 @@ apt install texlive texlive-science texlive-lang-english texlive-xetex
 \end{tcolorbox}
 
 \section{Lorem ipsum}
-
 Lorem ipsum dolor sit amet. Qui officiis repellendus id sunt consequatur
 ut nisi eligendi est rerum dolorem qui rerum porro non laudantium quasi ut
 laudantium aspernatur.
 
 Sed nesciunt voluptatem eos internos delectus sed blanditiis explicabo nam
 officia voluptatem vel provident minus non distinctio nihil.
+
+\section{Generate a PDF file}
+\subsection{\TeX{} Engines}
+\href{https://www.overleaf.com/learn/latex/Articles/What\%27s_in_a_Name\%3A_A_Guide_to_the_Many_Flavours_of_TeX}
+{What's in a Name: A Guide to the Many Flavours of TeX - Overleaf, Online LaTeX Editor}
+\subsection{Using the XeTeX engine}
+This is the preferred engine so far...
+\begin{tcolorbox}
+\begin{verbatim}
+xelatex thisfile.tex
+\end{verbatim}
+\end{tcolorbox}
+\subsection{Using the pdfTeX engine}
+\begin{tcolorbox}
+\begin{verbatim}
+pdflatex thisfile.tex
+\end{verbatim}
+\end{tcolorbox}
 
 \section{Paragraph indentation}
 Temporary fix until better understanding of the indentation rules.
@@ -311,27 +328,6 @@ Please read the
 - \href{https://www.ctan.org/pkg/float}{CTAN: Package float} \\
 - \href{https://ctan.org/pkg/amsmath?lang=en}{CTAN: Package amsmath} \\
 - \href{https://ctan.org/pkg/tcolorbox?lang=en}{CTAN: Package tcolorbox}
-
-\section{Generate a PDF file}
-
-\subsection{\TeX{} Engines}
-\href{https://www.overleaf.com/learn/latex/Articles/What\%27s_in_a_Name\%3A_A_Guide_to_the_Many_Flavours_of_TeX}
-{What's in a Name: A Guide to the Many Flavours of TeX - Overleaf, Online LaTeX Editor}
-
-\subsection{Using the XeTeX engine}
-This is the preferred engine so far...
-\begin{tcolorbox}
-\begin{verbatim}
-xelatex thisfile.tex
-\end{verbatim}
-\end{tcolorbox}
-
-\subsection{Using the pdfTeX engine}
-\begin{tcolorbox}
-\begin{verbatim}
-pdflatex thisfile.tex
-\end{verbatim}
-\end{tcolorbox}
 
 \section{Resources}
 - \href{https://www.latex-project.org/}
