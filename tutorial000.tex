@@ -12,6 +12,13 @@
 % Temporary fix until better understanding of the indentation rules
 \setlength{\parindent}{0pt}
 
+\usepackage{fontspec}
+\newfontfamily\Nerd{Symbols Nerd Font}[Scale=1.4]
+\newfontfamily\DejaSans{DejaVu Sans}[Scale=0.9]
+\newfontfamily\Iosevka{Iosevka Custom}[Scale=0.95]
+\newfontfamily\Symbola{Symbola}[Scale=1.0]
+
+
 \title{Yet Another \LaTeX{} Tutorial \\
   \medskip \large A road to Procrastination}
 \author{Energos}
@@ -129,26 +136,93 @@ Temporary fix until better understanding of the indentation rules.
 \end{tcblisting}
 
 \section{Verbatim}
+{\Nerd } Warnings: \\
+- Font configuration issues. \\
+- Do not break long lines. \\
+{\Nerd } TODO: Investigate the package verbatimbox.
+\subsection{Using the package verbatim}
 \begin{tcolorbox}
 \begin{verbatim}
 \usepackage{verbatim}
 \end{verbatim}
 \end{tcolorbox}
-
-\subsection{Including verbatim text}
-\begin{tcolorbox}
-  \verb|\begin{verbatim}| \\
-\verb|Verbatim stuff.| \\
-\verb|More verbatim stuff...| \\
-\verb|\end{verbatim}|
-\end{tcolorbox}
-
-\subsection{Including a file verbatim}
+\subsubsection{Including verbatim text}
+\begin{tcblisting}{}
+\begin{verbatim}
+Verbatim stuff.
+\LaTeX{} keywords are printed verbatim.
+More verbatim stuff...
+\end{verbatim}
+\end{tcblisting}
+\subsubsection{Including a file verbatim}
 \begin{tcolorbox}
 \begin{verbatim}
 \verbatiminput{file_name}
 \end{verbatim}
 \end{tcolorbox}
+\subsection{Using \textbackslash{}verb}
+\begin{tcblisting}{}
+  \verb|Verbatim stuff.| \\
+  \verb|\LaTeX{} keywords are printed verbatim.| \\
+  \verb|More verbatim stuff...|
+\end{tcblisting}
+{\Nerd } Warning: \verb|\|verb is illegal in arguments.
+
+\section{Fonts}
+{\Nerd } TODO:
+\href{https://www.overleaf.com/learn/latex/Font_sizes\%2C_families\%2C_and_styles}
+{Font sizes, families, and styles - Overleaf, Online LaTeX Editor} \\
+{\Nerd } Warning: verbatim and friends, tcolorbox and tcblisting  do not print the
+{\Nerd } and other ``funny'' characters, neither lowercase Greek letters.
+Probably it is just a font configuration issue.
+
+\subsection{Greek letters}
+\subsubsection{Using a font that includes the required glyphs}
+\begin{tcolorbox}
+\begin{verbatim}
+\usepackage{fontspec}
+
+% Pick your favorite font
+\newfontfamily\DejaSans{DejaVu Sans}
+\newfontfamily\Iosevka{Iosevka Custom}
+\newfontfamily\Symbola{Symbola}[Scale=1.1]
+
+% Lowercase Greek letter are not printed inside this box. Font issue?
+\def \sGreek {Αα Ββ Γγ Δδ Εε Ζζ Ηη Θθ Ιι Κκ Λλ Μμ Νν Ξξ Οο Ππ Ρρ Σσς Ττ Υυ Φφ Χχ Ψψ Ωω}
+\end{verbatim}
+\end{tcolorbox}
+
+\def \sGreek {Αα Ββ Γγ Δδ Εε Ζζ Ηη Θθ Ιι Κκ Λλ Μμ Νν Ξξ Οο Ππ Ρρ Σσς Ττ Υυ Φφ Χχ Ψψ Ωω}
+\begin{tabbing}
+  Greek letters: \\
+  Symbola:~~~~~~~\= {\Symbola \sGreek{}} \\
+  DejaVu Sans: \> {\DejaSans \sGreek{}} \\
+  Iosevka: \> {\Iosevka \sGreek{}} \\
+\end{tabbing}
+
+\subsection{Nerd Fonts}
+\href{https://www.nerdfonts.com/}{Nerd Fonts} must be installed in your system.
+\begin{tcolorbox}
+\begin{verbatim}
+\usepackage{fontspec}
+\newfontfamily\Nerd{Symbols Nerd Font}[Scale=1.4]
+\end{verbatim}
+\end{tcolorbox}
+\begin{tabbing}
+  This is a very small sample:\\
+  codicon   (Codicons) ~~~~~~~~~~~~~~~  \= {\Nerd              } \\
+  devicon   (Devicons)                  \> {\Nerd                 } \\
+  faicon    (Font Awesome)              \> {\Nerd              } \\
+  flicon    (Font Logos)                \> {\Nerd             } \\
+  ipsicon   (IEC Power Symbols)         \> {\Nerd ⏻ ⏽ ⭘ ⏾ ⏼} \\
+  mdicon    (Material Design)           \> {\Nerd 󰣚 󰣨 󱄅 󰣠 󱘗 󰙲 󰙱 󰢱 󰌠 󰲒 󰊢 󰸞 󰅖 󰚌 󰊠 󰠭 󰃤} \\
+  octicon   (Octicons)                  \> {\Nerd      ♥        } \\
+  pomicon   (Pomicons)                  \> {\Nerd       } \\
+  powerline (Powerline Symbols)         \> {\Nerd              } \\
+  sucicon   (Seti-UI + Custom)          \> {\Nerd                } \\
+  wicon     (Weather)                   \> {\Nerd        }
+\end{tabbing}
+
 
 \section{Images}
 \begin{tcolorbox}
@@ -354,6 +428,13 @@ Please read the
 {LaTeX Basics 0½: Emacs - YouTube}
 
 \section{The whole enchilada}
-\verbatiminput{tutorial000.tex}
+\begin{tcolorbox}
+\begin{verbatim}
+\verbatiminput{this_file_name}
+\end{verbatim}
+\end{tcolorbox}
+\begin{small}
+  \verbatiminput{tutorial000.tex}
+\end{small}
 
 \end{document}
