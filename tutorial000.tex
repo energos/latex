@@ -177,6 +177,37 @@ More verbatim stuff...
 Probably it is just a font configuration issue.
 
 \subsection{Greek letters}
+
+\subsubsection{Using Math Mode}
+\begin{tcblisting}{listing side text, righthand width=5cm}
+  \begin{tabbing}
+    Α ~ \= Alpha ~~~~~ \= $A \alpha$ \\
+    Β   \> Beta      \> $B \beta$ \\
+    Γ   \> Gamma     \> $\Gamma \gamma$ \\
+    Δ   \> Delta     \> $\Delta \delta$ \\
+    Ε   \> Epsilon   \> $E \epsilon \varepsilon$ \\
+    Ζ   \> Zeta      \> $Z \zeta$ \\
+    Η   \> Eta       \> $H \eta$ \\
+    Θ   \> Theta     \> $\Theta \theta \vartheta$ \\
+    Ι   \> Iota      \> $I \iota$ \\
+    Κ   \> Kappa     \> $K \kappa$ \\
+    Λ   \> Lambda    \> $\Lambda \lambda$ \\
+    Μ   \> Mu        \> $M \mu$ \\
+    Ν   \> Nu        \> $N \nu$ \\
+    Ξ   \> Xi        \> $\Xi \xi$ \\
+    Ο   \> Omicron   \> $O o$ \\
+    Π   \> Pi        \> $\Pi \pi$ \\
+    Ρ   \> Rho       \> $P \rho \varrho$ \\
+    Σ   \> Sigma     \> $\Sigma \sigma$ \\
+    Τ   \> Tau       \> $T \tau$ \\
+    Υ   \> Upsilon   \> $\Upsilon \upsilon$ \\
+    Φ   \> Phi       \> $\Phi \phi \varphi$ \\
+    Χ   \> Chi       \> $X \chi$ \\
+    Ψ   \> Psi       \> $\Psi \psi$ \\
+    Ω   \> Omega     \> $\Omega \omega$ \\
+  \end{tabbing}
+\end{tcblisting}
+
 \subsubsection{Using a font that includes the required glyphs}
 \begin{tcolorbox}
 \begin{verbatim}
@@ -187,12 +218,12 @@ Probably it is just a font configuration issue.
 \newfontfamily\Iosevka{Iosevka Custom}
 \newfontfamily\Symbola{Symbola}[Scale=1.1]
 
-% Lowercase Greek letter are not printed inside this box. Font issue?
+% Lowercase Greek letter are not printed. Font issue?
 \def \sGreek {Αα Ββ Γγ Δδ Εε Ζζ Ηη Θθ Ιι Κκ Λλ Μμ Νν Ξξ Οο Ππ Ρρ Σσς Ττ Υυ Φφ Χχ Ψψ Ωω}
 \end{verbatim}
 \end{tcolorbox}
 
-\def \sGreek {Αα Ββ Γγ Δδ Εε Ζζ Ηη Θθ Ιι Κκ Λλ Μμ Νν Ξξ Οο Ππ Ρρ Σσς Ττ Υυ Φφ Χχ Ψψ Ωω}
+\def \sGreek {Αα Ββ Γγ Δδ Εϵε Ζζ Ηη Θθϑ Ιι Κκ Λλ Μμ Νν Ξξ Οο Ππ Ρρϱ Σσς Ττ Υυ Φϕφ Χχ Ψψ Ωω}
 \begin{tabbing}
   Greek letters: \\
   Symbola:~~~~~~~\= {\Symbola \sGreek{}} \\
