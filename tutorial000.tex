@@ -74,14 +74,6 @@ apt install texlive texlive-science texlive-lang-english texlive-xetex
 \end{verbatim}
 \end{tcolorbox}
 
-\section{Lorem ipsum}
-Lorem ipsum dolor sit amet. Qui officiis repellendus id sunt consequatur
-ut nisi eligendi est rerum dolorem qui rerum porro non laudantium quasi ut
-laudantium aspernatur.
-
-Sed nesciunt voluptatem eos internos delectus sed blanditiis explicabo nam
-officia voluptatem vel provident minus non distinctio nihil.
-
 \section{Generate a PDF file}
 \subsection{\TeX{} Engines}
 \href{https://www.overleaf.com/learn/latex/Articles/What\%27s_in_a_Name\%3A_A_Guide_to_the_Many_Flavours_of_TeX}
@@ -173,65 +165,44 @@ More verbatim stuff...
 \href{https://www.overleaf.com/learn/latex/Font_sizes\%2C_families\%2C_and_styles}
 {Font sizes, families, and styles - Overleaf, Online LaTeX Editor} \\
 {\Nerd } Warning: verbatim and friends, tcolorbox and tcblisting  do not print the
-{\Nerd } and other ``funny'' characters, neither lowercase Greek letters.
-Probably it is just a font configuration issue.
+{\Nerd } and other ``funny'' characters, neither lowercase Greek letters and some
+synbols. Probably it is a font configuration issue.
 
-\subsection{Greek letters}
-
-\subsubsection{Using Math Mode}
-\begin{tcblisting}{listing side text, righthand width=5cm}
-  \begin{tabbing}
-    Α ~ \= Alpha ~~~~~ \= $A \alpha$ \\
-    Β   \> Beta      \> $B \beta$ \\
-    Γ   \> Gamma     \> $\Gamma \gamma$ \\
-    Δ   \> Delta     \> $\Delta \delta$ \\
-    Ε   \> Epsilon   \> $E \epsilon \varepsilon$ \\
-    Ζ   \> Zeta      \> $Z \zeta$ \\
-    Η   \> Eta       \> $H \eta$ \\
-    Θ   \> Theta     \> $\Theta \theta \vartheta$ \\
-    Ι   \> Iota      \> $I \iota$ \\
-    Κ   \> Kappa     \> $K \kappa$ \\
-    Λ   \> Lambda    \> $\Lambda \lambda$ \\
-    Μ   \> Mu        \> $M \mu$ \\
-    Ν   \> Nu        \> $N \nu$ \\
-    Ξ   \> Xi        \> $\Xi \xi$ \\
-    Ο   \> Omicron   \> $O o$ \\
-    Π   \> Pi        \> $\Pi \pi$ \\
-    Ρ   \> Rho       \> $P \rho \varrho$ \\
-    Σ   \> Sigma     \> $\Sigma \sigma$ \\
-    Τ   \> Tau       \> $T \tau$ \\
-    Υ   \> Upsilon   \> $\Upsilon \upsilon$ \\
-    Φ   \> Phi       \> $\Phi \phi \varphi$ \\
-    Χ   \> Chi       \> $X \chi$ \\
-    Ψ   \> Psi       \> $\Psi \psi$ \\
-    Ω   \> Omega     \> $\Omega \omega$ \\
-  \end{tabbing}
-\end{tcblisting}
-
-\subsubsection{Using a font that includes the required glyphs}
+{\Nerd } Use a font that includes all the required glyphs.
 \begin{tcolorbox}
 \begin{verbatim}
 \usepackage{fontspec}
 
-% Pick your favorite font
+% Pick your favorite fonts
 \newfontfamily\DejaSans{DejaVu Sans}
 \newfontfamily\Iosevka{Iosevka Custom}
 \newfontfamily\Symbola{Symbola}[Scale=1.1]
-
-% Lowercase Greek letter are not printed. Font issue?
-\def \sGreek {Αα Ββ Γγ Δδ Εε Ζζ Ηη Θθ Ιι Κκ Λλ Μμ Νν Ξξ Οο Ππ Ρρ Σσς Ττ Υυ Φφ Χχ Ψψ Ωω}
 \end{verbatim}
 \end{tcolorbox}
 
-\def \sGreek {Αα Ββ Γγ Δδ Εϵε Ζζ Ηη Θθϑ Ιι Κκ Λλ Μμ Νν Ξξ Οο Ππ Ρρϱ Σσς Ττ Υυ Φϕφ Χχ Ψψ Ωω}
-\begin{tabbing}
-  Greek letters: \\
-  Symbola:~~~~~~~\= {\Symbola \sGreek{}} \\
-  DejaVu Sans: \> {\DejaSans \sGreek{}} \\
-  Iosevka: \> {\Iosevka \sGreek{}} \\
-\end{tabbing}
+\def \sLorem {
+  Lorem ipsum dolor sit amet. Qui officiis repellendus id sunt consequatur
+  ut nisi eligendi est rerum dolorem qui rerum porro non laudantium quasi ut
+  laudantium aspernatur.
 
-\subsection{Nerd Fonts}
+  Sed nesciunt voluptatem eos internos delectus sed blanditiis explicabo nam
+  officia voluptatem vel provident minus non distinctio nihil.}
+\def \sGreek {Αα Ββ Γγ Δδ Εϵε Ζζ Ηη Θθϑ Ιι Κκ Λλ Μμ Νν Ξξ Οο Ππ Ρρϱ Σσς Ττ Υυ Φϕφ Χχ Ψψ Ωω}
+\def \sSymbols {← ⇐ → ⇒ ↑ ⇑ ↓ ⇓ ↔ ⇔ ↕ ⇕ ∞ ∇ △ √ × ÷ ⊕ ⊗ ≡ ∼ = ≃ ≈ ∑ ∏ ≤ ≥ α β γ Γ δ ∆ ω Ω}
+
+\underline{Default document font}: \fontname\font \\ [0.5ex]
+\sLorem \\ [0.5ex]
+{\Nerd } Lowercase Greek letters and some symbols are not printed. \\
+\sGreek \\ [0.5ex] \sSymbols \\ [1.0ex]
+\underline{Symbola}: {\Symbola \fontname\font \\ [0.5ex]
+  \sLorem \\ [0.5ex] \sGreek \\ [0.5ex] \sSymbols} \\ [1.0ex]
+\underline{DejaVu Sans}: {\DejaSans \fontname\font \\ [0.5ex]
+  \sLorem \\ [0.5ex] \sGreek \\ [0.5ex] \sSymbols} \\ [1.0ex]
+\underline{Iosevka}: {\Iosevka \fontname\font \\ [0.5ex]
+  \sLorem \\ [0.5ex] \sGreek \\ [0.5ex] \sSymbols} \\ [1.0ex]
+And now, back to \underline{Default document font}: \fontname\font
+
+\section{Nerd Fonts}
 \href{https://www.nerdfonts.com/}{Nerd Fonts} must be installed in your system.
 \begin{tcolorbox}
 \begin{verbatim}
