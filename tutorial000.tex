@@ -17,14 +17,24 @@
 \newfontfamily\DejaSans{DejaVu Sans}[Scale=0.9]
 \newfontfamily\Iosevka{Iosevka Custom}[Scale=0.95]
 \newfontfamily\Symbola{Symbola}[Scale=1.0]
+\newfontfamily\FreeSerif{FreeSerif}[Scale=1.1]
+\newfontfamily\Libertine{Linux Libertine O}[Scale=1.1]
+\newfontfamily\Biolinum{Linux Biolinum O}[Scale=1.1]
 
+% \setmainfont{FreeSerif}[Scale=1.05]
+% \setmainfont{Linux Biolinum O}[Scale=1.1]
+% \setmainfont{Linux Libertine O}[Scale=1.1]
+
+\usepackage{fontawesome5}
 
 \title{Yet Another \LaTeX{} Tutorial \\
-  \medskip \large A road to Procrastination}
+  \medskip \large Breadcrumbs in the road to Procrastination}
 \author{Energos}
-\date{March 2025}
+\date{April 2025}
 
 \begin{document}
+
+% \FreeSerif
 
 \maketitle
 
@@ -32,10 +42,11 @@
 \href{https://www.youtube.com/watch?v=9eLjt5Lrocw}
 {Why \LaTeX{}? - YouTube}
 
-\section{Install \LaTeX{} in Debian}
+\section{Install \LaTeX{} on Debian}
 \begin{tcolorbox}
 \begin{verbatim}
-apt install texlive texlive-science texlive-lang-english texlive-xetex
+apt install texlive texlive-science texlive-lang-english \
+    texlive-fonts-extra texlive-xetex
 \end{verbatim}
 \end{tcolorbox}
 
@@ -160,6 +171,7 @@ More verbatim stuff...
 \end{tcblisting}
 {\Nerd } Warning: \verb|\|verb is illegal in arguments.
 
+% \pagebreak
 \section{Fonts}
 {\Nerd } TODO:
 \href{https://www.overleaf.com/learn/latex/Font_sizes\%2C_families\%2C_and_styles}
@@ -188,12 +200,16 @@ synbols. Probably it is a font configuration issue.
   Sed nesciunt voluptatem eos internos delectus sed blanditiis explicabo nam
   officia voluptatem vel provident minus non distinctio nihil.}
 \def \sGreek {Αα Ββ Γγ Δδ Εϵε Ζζ Ηη Θθϑ Ιι Κκ Λλ Μμ Νν Ξξ Οο Ππ Ρρϱ Σσς Ττ Υυ Φϕφ Χχ Ψψ Ωω}
-\def \sSymbols {← ⇐ → ⇒ ↑ ⇑ ↓ ⇓ ↔ ⇔ ↕ ⇕ ∞ ∇ △ √ × ÷ ⊕ ⊗ ≡ ∼ = ≃ ≈ ∑ ∏ ≤ ≥ α β γ Γ δ ∆ ω Ω}
+\def \sSymbols {⚠⁉ ℃ ℉ ← ⇐ → ⇒ ↑ ⇑ ↓ ⇓ ↔ ⇔ ↕ ⇕ ∞ ∇ △ √ × ÷ ⊕ ⊗ ≡ ∼ = ≃ ≈ ∑ ∏ ≤ ≥ α β γ Γ δ ∆ ω Ω}
 
 \underline{Default document font}: \fontname\font \\ [0.5ex]
-\sLorem \\ [0.5ex]
-{\Nerd } Lowercase Greek letters and some symbols are not printed. \\
-\sGreek \\ [0.5ex] \sSymbols \\ [1.0ex]
+\sLorem \\ [0.5ex] \sGreek \\ [0.5ex] \sSymbols \\ [1.0ex]
+\underline{Libertine}: {\Libertine \fontname\font \\ [0.5ex]
+  \sLorem \\ [0.5ex] \sGreek \\ [0.5ex] \sSymbols} \\ [1.0ex]
+\underline{Biolinum}: {\Biolinum \fontname\font \\ [0.5ex]
+  \sLorem \\ [0.5ex] \sGreek \\ [0.5ex] \sSymbols} \\ [1.0ex]
+\underline{FreeSerif}: {\FreeSerif \fontname\font \\ [0.5ex]
+  \sLorem \\ [0.5ex] \sGreek \\ [0.5ex] \sSymbols} \\ [1.0ex]
 \underline{Symbola}: {\Symbola \fontname\font \\ [0.5ex]
   \sLorem \\ [0.5ex] \sGreek \\ [0.5ex] \sSymbols} \\ [1.0ex]
 \underline{DejaVu Sans}: {\DejaSans \fontname\font \\ [0.5ex]
@@ -202,6 +218,7 @@ synbols. Probably it is a font configuration issue.
   \sLorem \\ [0.5ex] \sGreek \\ [0.5ex] \sSymbols} \\ [1.0ex]
 And now, back to \underline{Default document font}: \fontname\font
 
+% \pagebreak
 \section{Nerd Fonts}
 \href{https://www.nerdfonts.com/}{Nerd Fonts} must be installed in your system.
 \begin{tcolorbox}
@@ -211,7 +228,7 @@ And now, back to \underline{Default document font}: \fontname\font
 \end{verbatim}
 \end{tcolorbox}
 \begin{tabbing}
-  This is a very small sample:\\
+  This is a very small sample: \\  [1.0ex]
   codicon   (Codicons) ~~~~~~~~~~~~~~~  \= {\Nerd              } \\
   devicon   (Devicons)                  \> {\Nerd                 } \\
   faicon    (Font Awesome)              \> {\Nerd              } \\
@@ -224,6 +241,26 @@ And now, back to \underline{Default document font}: \fontname\font
   sucicon   (Seti-UI + Custom)          \> {\Nerd                } \\
   wicon     (Weather)                   \> {\Nerd        }
 \end{tabbing}
+
+\section{Font Awesome}
+- \href{https://fontawesome.com/}{Font Awesome} \\
+- \href{https://ctan.org/pkg/fontawesome5?lang=en}{Package fontawesome5 - CTAN} \\
+On Debian you need to install the package texlive-fonts-extra.
+\begin{tcolorbox}
+\begin{verbatim}
+\usepackage{fontawesome5}
+\end{verbatim}
+\end{tcolorbox}
+
+\begin{tabbing}
+  This is this is an insignificantly small sample: \\ [1.0ex]
+  Nerd Fonts (for reference) ~~~~~~~~~  \= {\Nerd              } \\ [1.0ex]
+  Font Awesome (normal) \> \faGit{} \faGit*{} \faGithub{} \faYCombinator{} \faCheck{} \faTimes{} \faBug{} \faPoop{} \faSkull{} \faSkullCrossbones{} \faArrowLeft{} \faArrowUp{} \faArrowRight{} \faArrowDown{} \\
+  Font Awesome (large) \> \large \faGit{} \faGit*{} \faGithub{} \faYCombinator{} \faCheck{} \faTimes{} \faBug{} \faPoop{} \faSkull{} \faSkullCrossbones{} \faArrowLeft{} \faArrowUp{} \faArrowRight{} \faArrowDown{} \\
+  Font Awesome (Large)\> \Large \faGit{} \faGit*{} \faGithub{} \faYCombinator{} \faCheck{} \faTimes{} \faBug{} \faPoop{} \faSkull{} \faSkullCrossbones{} \faArrowLeft{} \faArrowUp{} \faArrowRight{} \faArrowDown{} \\
+  Font Awesome (LARGE) \> \LARGE \faGit{} \faGit*{} \faGithub{} \faYCombinator{} \faCheck{} \faTimes{} \faBug{} \faPoop{} \faSkull{} \faSkullCrossbones{} \faArrowLeft{} \faArrowUp{} \faArrowRight{} \faArrowDown{} \\
+\end{tabbing}
+
 
 \section{Greek Letters and Math Symbols}
 
@@ -258,7 +295,8 @@ And now, back to \underline{Default document font}: \fontname\font
 {\Nerd } Why Greek letters are printed in italic? Anything inside \emph{\$ \$} will be printed in italic...
 
 \bigskip
-\href{https://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf}{The Comprehensive LaTeX Symbol List - CTAN}
+- \href{https://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf}
+{The Comprehensive LaTeX Symbol List - CTAN}
 
 \begin{tabbing}
   \underline{Keyword} ~~~~~~~~~~~~~ \= \underline{Symbol} ~~~~~~~ \=  \underline{Keyword} ~~~~~~~~~~~~~ \= \underline{Symbol} \\ [0.5ex]
@@ -459,7 +497,8 @@ Please read the
 - \href{https://www.ctan.org/pkg/graphicx}{CTAN: Package graphicx} \\
 - \href{https://www.ctan.org/pkg/float}{CTAN: Package float} \\
 - \href{https://ctan.org/pkg/amsmath?lang=en}{CTAN: Package amsmath} \\
-- \href{https://ctan.org/pkg/tcolorbox?lang=en}{CTAN: Package tcolorbox}
+- \href{https://ctan.org/pkg/tcolorbox?lang=en}{CTAN: Package tcolorbox} \\
+- \href{https://ctan.org/pkg/fontawesome5?lang=en}{CTAN: Package fontawesome5}
 
 \section{Resources}
 - \href{https://www.latex-project.org/}
@@ -474,6 +513,16 @@ Please read the
 - \href{https://texfaq.org/}
 {The TeX Frequently Asked Question List - The TeX FAQ} \\
 - \href{https://texfaq.org/FAQ-latex-books}{Books on LaTeX - The TeX FAQ} \\
+- \href{https://www.tug.org/FontCatalogue/}{The LaTeX Font Catalogue} \\
+- \href{https://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf}
+{The Comprehensive LaTeX Symbol List - CTAN} \\
+- \href{https://www.learnlatex.org/en/}
+{Learn LaTeX online for free in beginner friendly lessons | learnlatex.org} \\
+- \href{https://r2src.github.io/top10fonts/}{Top 10 LaTeX Fonts} \\
+- \href{https://www.draketo.de/anderes/latex-fonts.html}{Top 20 Latex Fonts} \\
+- \href{https://www.fontspace.com/unicode/char/26A0-warning-sign}
+{“{\Symbola ⚠}” WARNING SIGN | U+26A0 Unicode | FontSpace}
+
 - \href{https://www.gnu.org/software/auctex/}
 {AUCTeX - Sophisticated document creation in GNU Emacs}
 
