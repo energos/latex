@@ -352,6 +352,36 @@ SVG Images require more work:
 \href{https://www.baeldung.com/cs/latex-svg-images}
 {How to Use SVG Images in \LaTeX{}}.
 
+\pagebreak
+\section{Math Mode}
+\subsection{Inline Math Mode}
+Math Mode: \verb|$...$|
+\begin{tcblisting}{}
+  This is a meaningless equation: $y=x^0+x^1+x^2+x^3+x^4+x^5+x^6+x^7+x^8$ \\
+  Extra      spaces     are    irrelevant. \\
+  This   is   a  meaningless  equation:   $ y =x ^ 0 + x ^ 1 + x ^ 2 + x ^ 3 + x ^ 4 + x ^ 5 + x ^ 6 + x ^ 7 + x ^ 8 $
+\end{tcblisting}{}
+
+\subsection{Protected inline Math Mode}
+Protected Math Mode: \verb|${...}$|
+\begin{tcblisting}{}
+  Not protected: \\
+  This is a very long line with a very long meaningless equation $y=x^0+x^1+x^2+x^3+x^4+x^5+x^6+x^7+x^8$ that can be broken. \\
+  Protected: \\
+  This is a very long line with a very long meaningless equation ${x^0+x^1+x^2+x^3+x^4+x^5+x^6+x^7+x^8}$ that will not be broken.
+\end{tcblisting}
+
+{\Nerd } Warning: Protected inline Math Mode is buggy {\scriptsize \Nerd } when not inside a box or a minipage. \\
+This is a very long line with a very long meaningless equation ${y=x^0+x^1+x^2+x^3+x^4+x^5+x^6+x^7+x^8}$ that will not be broken.
+This is clearly not working properly.
+
+\subsection{Display Math Mode}
+Display Math Mode: \verb|$$...$$| or \verb|\[...\]|
+\begin{tcblisting}{}
+  $$y=x^0+x^1+x^2+x^3+x^4$$ or \[y=x^0+x^1+x^2+x^3+x^4\]
+  Extra   spaces   are   irrelevant.   $$ y =x ^ 0 + x ^ 1 + x ^ 2 + x ^ 3 + x ^ 4 $$
+\end{tcblisting}
+
 \section{Equations}
 
 \begin{tcolorbox}
