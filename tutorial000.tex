@@ -30,7 +30,7 @@
 \title{Yet Another \LaTeX{} Tutorial \\
   \medskip \large Breadcrumbs in the road to Procrastination}
 \author{Energos}
-\date{April 2025}
+\date{\today}
 
 \begin{document}
 
@@ -183,7 +183,6 @@ More verbatim stuff...
 \end{tcblisting}
 {\Nerd } Warning: \verb|\|verb is illegal in arguments.
 
-% \pagebreak
 \section{Fonts}
 {\Nerd } TODO:
 \href{https://www.overleaf.com/learn/latex/Font_sizes\%2C_families\%2C_and_styles}
@@ -268,8 +267,6 @@ And now, back to \underline{Default document font}: \fontname\font
 \end{tabbing}
 
 \section{Font Awesome}
-- \href{https://fontawesome.com/}{Font Awesome} \\
-- \href{https://ctan.org/pkg/fontawesome5?lang=en}{Package fontawesome5 - CTAN} \\
 On Debian you need to install the package texlive-fonts-extra.
 \begin{tcolorbox}
 \begin{verbatim}
@@ -283,7 +280,7 @@ On Debian you need to install the package texlive-fonts-extra.
   Font Awesome (normal) \> \faGit{} \faGit*{} \faGithub{} \faYCombinator{} \faCheck{} \faTimes{} \faBug{} \faPoop{} \faSkull{} \faSkullCrossbones{} \faArrowLeft{} \faArrowUp{} \faArrowRight{} \faArrowDown{} \\
   Font Awesome (large) \> \large \faGit{} \faGit*{} \faGithub{} \faYCombinator{} \faCheck{} \faTimes{} \faBug{} \faPoop{} \faSkull{} \faSkullCrossbones{} \faArrowLeft{} \faArrowUp{} \faArrowRight{} \faArrowDown{} \\
   Font Awesome (Large)\> \Large \faGit{} \faGit*{} \faGithub{} \faYCombinator{} \faCheck{} \faTimes{} \faBug{} \faPoop{} \faSkull{} \faSkullCrossbones{} \faArrowLeft{} \faArrowUp{} \faArrowRight{} \faArrowDown{} \\
-  Font Awesome (LARGE) \> \LARGE \faGit{} \faGit*{} \faGithub{} \faYCombinator{} \faCheck{} \faTimes{} \faBug{} \faPoop{} \faSkull{} \faSkullCrossbones{} \faArrowLeft{} \faArrowUp{} \faArrowRight{} \faArrowDown{} \\
+  Font Awesome (LARGE) \> \LARGE \faGit{} \faGit*{} \faGithub{} \faYCombinator{} \faCheck{} \faTimes{} \faBug{} \faPoop{} \faSkull{} \faSkullCrossbones{} \faArrowLeft{} \faArrowUp{} \faArrowRight{} \faArrowDown{}
 \end{tabbing}
 
 
@@ -314,15 +311,14 @@ On Debian you need to install the package texlive-fonts-extra.
     Φ   \> Phi       \> $\Phi \phi \varphi$ \\
     Χ   \> Chi       \> $X \chi$ \\
     Ψ   \> Psi       \> $\Psi \psi$ \\
-    Ω   \> Omega     \> $\Omega \omega$ \\
+    Ω   \> Omega     \> $\Omega \omega$
   \end{tabbing}
 \end{tcblisting}
-{\Nerd } Why Greek letters are printed in italic? Anything inside \emph{\$ \$} will be printed in italic...
+{\Nerd } \>
+Math Mode: $A \alpha \; B \beta \; \Gamma \gamma \; \Delta \delta \; \cdots \; X \chi \; \Psi \psi \; \Omega \omega$ \>\>\>\>
+Text Mode: {\Symbola \large Aα\, Bβ\, Γγ\, Δδ\, \textperiodcentered \textperiodcentered \textperiodcentered \, Xχ\, Ψψ\, Ωω}
 
 \bigskip
-- \href{https://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf}
-{The Comprehensive LaTeX Symbol List - CTAN}
-
 \begin{tabbing}
   \underline{Keyword} ~~~~~~~~~~~~~ \= \underline{Symbol} ~~~~~~~ \=  \underline{Keyword} ~~~~~~~~~~~~~ \= \underline{Symbol} \\ [0.5ex]
   \verb|\leftarrow|       \> $\leftarrow$       \> \verb|\Leftarrow|       \> $\Leftarrow$       \\
@@ -377,7 +373,6 @@ SVG Images require more work:
 \href{https://www.baeldung.com/cs/latex-svg-images}
 {How to Use SVG Images in \LaTeX{}}.
 
-\pagebreak
 \section{Math Mode}
 \subsection{Inline Math Mode}
 Math Mode: \verb|$...$|
@@ -393,7 +388,7 @@ Protected Math Mode: \verb|${...}$|
   Not protected: \\
   This is a very long line with a very long meaningless equation $y=x^0+x^1+x^2+x^3+x^4+x^5+x^6+x^7+x^8$ that can be broken. \\
   Protected: \\
-  This is a very long line with a very long meaningless equation ${x^0+x^1+x^2+x^3+x^4+x^5+x^6+x^7+x^8}$ that will not be broken.
+  This is a very long line with a very long meaningless equation ${y=x^0+x^1+x^2+x^3+x^4+x^5+x^6+x^7+x^8}$ that will not be broken.
 \end{tcblisting}
 
 {\Nerd } Warning: Protected inline Math Mode is buggy {\scriptsize \Nerd } when not inside a box or a minipage. \\
@@ -576,8 +571,7 @@ Please read the
 - \href{https://r2src.github.io/top10fonts/}{Top 10 LaTeX Fonts} \\
 - \href{https://www.draketo.de/anderes/latex-fonts.html}{Top 20 Latex Fonts} \\
 - \href{https://www.fontspace.com/unicode/char/26A0-warning-sign}
-{“{\Symbola ⚠}” WARNING SIGN | U+26A0 Unicode | FontSpace}
-
+{“{\Symbola ⚠}” WARNING SIGN | U+26A0 Unicode | FontSpace} \\
 - \href{https://www.gnu.org/software/auctex/}
 {AUCTeX - Sophisticated document creation in GNU Emacs}
 
