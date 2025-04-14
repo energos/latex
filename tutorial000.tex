@@ -444,6 +444,32 @@ Display Math Mode: \verb|$$...$$| or \verb|\[...\]|
   \end{tabbing}
 \end{tcblisting}
 
+\section{Tables}
+\begin{tcblisting}{}
+  \begin{tabular}{lll}
+    & & 0 \\
+    1 & 1 & 1 \\
+    22 & 22 & 22 \\
+    333 & 333 & 333 \\
+    4444 & 4444 & 4444
+  \end{tabular}
+\end{tcblisting}
+
+\begin{tcblisting}{}
+  \begin{table}[H]
+    \def\arraystretch{1.2}
+    \centering
+    % c "centered", l "left", r "right"
+    \begin{tabular}{|c||r|r|r|r|r|}
+      \hline
+      $x$ & 1 & 2 & 3 & 4 & 5 \\ \hline
+      $y=x^2$ & 1 & 4 & 9 & 16 & 25 \\
+      $y=x^3$ & 1 & 8 & 27 & 64 & 125 \\ \hline
+    \end{tabular}
+    \caption{Squares and Cubes}
+  \end{table}
+\end{tcblisting}
+
 \section{Boxes}
 Draw colored and framed boxes using
 \href{https://ctan.org/pkg/tcolorbox?lang=en}{tcolorbox}.
