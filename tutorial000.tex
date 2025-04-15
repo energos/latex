@@ -230,18 +230,36 @@ synbols. Probably it is a font configuration issue.
   \sLorem \\ [0.5ex] \sGreek \\ [0.5ex] \sSymbols} \\ [1.0ex]
 And now, back to \underline{Default document font}: \fontname\font
 
-\section{Font size}
+\section{Text size and formatting}
+\begin{tcblisting}{}
+  This will produce {\LARGE large text}. \\
+  This will produce {\small small text}. \\
+  This will produce \textbf{bold text}. \\
+  This will produce \textit{italicized text}. \\
+  This will produce \texttt{typewriter font} text. \\
+  This will produce \colorbox{lightgray}{\textcolor{blue}{blue text in a light gray background}}. \\
+  This will produce \textcolor{violet}{\textit{violet text, italicized} and not italicized}. \\
+  This will produce \textsc{small caps} text. Compare it with NORMAL CAPS. \\
+  \centering This line is centered.
+  \flushright This line is right justified.
+  \flushleft This line is left justified.
+\end{tcblisting}
+
+\vspace{0.5ex}
+\def \sTest {\LaTeX{} Test}
 \begin{tabbing}
-  {\Huge \LaTeX{} \texttt{Tutorial}}         \=  (\verb|\Huge|) \\
-  {\huge \LaTeX{} \texttt{Tutorial}}         \>  (\verb|\huge|) \\
-  {\LARGE \LaTeX{} \texttt{Tutorial}}        \>  (\verb|\LARGE|) \\
-  {\Large \LaTeX{} \texttt{Tutorial}}        \>  (\verb|\Large|) \\
-  {\large \LaTeX{} \texttt{Tutorial}}        \>  (\verb|\large|) \\
-  {\normalsize \LaTeX{} \texttt{Tutorial}}   \>  (\verb|\normalsize|) \\
-  {\small \LaTeX{} \texttt{Tutorial}}        \>  (\verb|\small|) \\
-  {\footnotesize \LaTeX{} \texttt{Tutorial}} \>  (\verb|\footnotesize|) \\
-  {\scriptsize \LaTeX{} \texttt{Tutorial}}   \>  (\verb|\scriptsize|) \\
-  {\tiny \LaTeX{} \texttt{Tutorial}}         \>  (\verb|\tiny|)
+  \underline{\texttt{\textbackslash Huge}} ~~~~~~~~~~~~~~~~~~~~~~~~~ \=
+  \underline{\texttt{\textbackslash LARGE}} ~~~~~~~~~~~~~~ \=
+  \underline{\texttt{\textbackslash large}} ~~~~~~~~~~~~~~ \=
+  \underline{\texttt{\textbackslash small}} ~~~~~~~~~~~~~~~ \=
+  \underline{\texttt{\textbackslash scriptsize}} \\ [1.0ex]
+  \Huge \sTest \> \LARGE \sTest \> \large \sTest \> \small \sTest \> \scriptsize \sTest \\ [4.0ex]
+  \underline{\texttt{\textbackslash huge}} \>
+  \underline{\texttt{\textbackslash Large}} \>
+  \underline{\texttt{\textbackslash normalsize}} \>
+  \underline{\texttt{\textbackslash footnotesize}} \>
+  \underline{\texttt{\textbackslash tiny}} \\ [1.0ex]
+  \huge \sTest \> \Large \sTest \> \normalsize \sTest \> \footnotesize \sTest \> \tiny \sTest
 \end{tabbing}
 
 \section{Nerd Fonts}
