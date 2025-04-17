@@ -28,7 +28,7 @@
 \usepackage{fontawesome5}
 
 \title{Yet Another \LaTeX{} Tutorial \\
-  \medskip \large Breadcrumbs in the road to Procrastination}
+  \medskip \large Breadcrumbs in the Procrastination Road}
 \author{Energos}
 \date{\today}
 
@@ -262,7 +262,14 @@ And now, back to \underline{Default document font}: \fontname\font
   \huge \sTest \> \Large \sTest \> \normalsize \sTest \> \footnotesize \sTest \> \tiny \sTest
 \end{tabbing}
 
-\section{Nerd Fonts}
+\section{Emojis}
+\begin{tabbing}
+  Symbola: ~~~~~~~~~~~ \= {\Large \Symbola ☠ 🔔 👻 💩 🐛 😈 😇 ☺ ☹ 😃 😱 🖤 ⚠ ← ↑ → ↓ 💣 🍺} \\
+  Nerd Font: \> {\small \Nerd 󰯆 󰂚 󰊠  󰃤 󰱯            󰅶 󰚑 } \\
+  Font Awesome: \> {\large \faSkullCrossbones\ \faBell\ \faGhost\ \faPoo\ \faBug\ \faSmile\ \faAngry\ \faGrin\ \faHeart\ \faExclamationCircle\ \faExclamationTriangle\ \faArrowLeft\ \faArrowUp\ \faArrowRight\ \faArrowDown\ \faLinux\ \faPastafarianism\ \faMicrochip\ \faLightbulb\ \faCoffee\ \faBomb\ \faBeer}
+\end{tabbing}
+
+\subsection{Nerd Fonts}
 \href{https://www.nerdfonts.com/}{Nerd Fonts} must be installed in your system.
 \begin{tcolorbox}
 \begin{verbatim}
@@ -285,7 +292,7 @@ And now, back to \underline{Default document font}: \fontname\font
   wicon     (Weather)                   \> {\Nerd        }
 \end{tabbing}
 
-\section{Font Awesome}
+\subsection{Font Awesome}
 On Debian you need to install the package texlive-fonts-extra.
 \begin{tcolorbox}
 \begin{verbatim}
@@ -304,7 +311,6 @@ On Debian you need to install the package texlive-fonts-extra.
 
 
 \section{Greek Letters and Math Symbols}
-
 \begin{tcblisting}{listing side text, righthand width=5cm}
   \begin{tabbing}
     Α ~ \= Alpha ~~~~~ \= $A \alpha$ \\
@@ -419,7 +425,6 @@ Display Math Mode: \verb|$$...$$| or \verb|\[...\]|
 \end{tcblisting}
 
 \section{Equations}
-
 \begin{tcolorbox}
 \begin{verbatim}
 % \usepackage{amsmath, amssymb, amsthm, amsfonts}
@@ -508,7 +513,6 @@ Please read the
 \end{tcolorbox}
 
 \subsection{Simple Boxes}
-
 \begin{tcolorbox}
 \begin{verbatim}
 \begin{tcolorbox}
@@ -535,7 +539,6 @@ Please read the
 \end{tcolorbox}
 
 \subsection{Listing Boxes}
-
 \begin{tcolorbox}
 \begin{verbatim}
 \usepackage[listings]{tcolorbox}
